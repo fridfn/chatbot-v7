@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" no-translate="true">
+ <head>
+  <meta charset="utf-8"/>
+  <link rel="icon" href="favicon.ico" favicon.ico/>
+  <meta name="viewport" content="width=device-width, initial-scale-1.0, user-scalable=no"/>
+  <title>Chat Bot</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
+ </head>
+ <body id="body" class="body">
+ <header>
+  <div class="headerBot">
+   <div class="imgboxs" id="imgBox" onclick="reactBot()">
+    <img src="boticon.webp" alt="FaBOT" id="img"/>
+   </div>
+   <div class="botInfo">
+     <p class="nameBot">Fabot Chat</p>
+     <p class="botStatus">Online</p>
+   </div>
+    <ion-icon class="headerIcon" id="mail" name="mail-sharp" onclick="openSendEmail()"></ion-icon>
+    <ion-icon class="headerIcon" id="ellips" name="ellipsis-vertical-sharp"></ion-icon>
+  </div>
+ </header>
+  <h1 class="err">MAAF WEBSITE INI TIDAK TERSEDIA UNTUK VERSI DESKTOP</h1>
+  <div class="blurLayer" id="layer"></div>
+   <div class="containerAlert">
+    <div class="myAlert" id="jawaban">
+     <p class="infoAlert">INFO !</p>
+     <p class="textAlert" id="myDescription">PESAN ALERT !</p>
+     <div class="cta-alert">
+      <button class="btn-alert" id="myButton">Ok</button>
+     </div>
+    </div>
+   </div>
+   <div class="arrow-button">
+    <ion-icon name="arrow-back-sharp" class="arrow-menu" onclick="DeveloperMenu()" id="textWhite"></ion-icon>
+   </div>
+   <div class="menu">
+    <div class="headerMenu">
+     <ion-icon name="moon" class="main-icon" id="moon" onclick="switchTheme()"></ion-icon>
+     <ion-icon name="person-add" class="main-icon" id="qr" onclick="opsi()"></ion-icon>
+     <ion-icon name="heart" class="main-icon" id="brush" onclick="opsi()"></ion-icon>
+    </div>
+     <div class="profileSection" id="profileSection">
+     <div class="blurLayer" id="blurLayer"></div>
+      <div class="profileImgBox">
+        <img src="profileicon.webp" class="imgProfile" onclick="perbesarGambar()">
+       <div class="userInfo">
+        <p class="nameUser">Farid Fn</p>
+        <p class="statusUser">Status</p>
+       </div>
+      </div>
+    </div>
+    <div class="contentMenu">
+     <div class="cards">
+      <p id="bio" class="infoTxt"><ion-icon name="person"></ion-icon>&nbsp;About Me</p>
+      
+       <div class="description">
+        <div class="wrapper-text">
+         <p class="descriptionText" id="descriptionSatu" onclick="descriptionClick()">DESKRIPSI 1</p>
+        </div>
+       </div>
+       
+      <div id="text1" class="description">
+        <div class="wrapper-text">
+         <div class="arrow"></div>
+         <p class="descriptionText" id="descriptionDua">DESKRIPSI 2</p>
+        </div>
+       </div>
+       
+      <div id="text2" class="description">
+        <div class="wrapper-text">
+         <div class="arrow"></div>
+         <p class="descriptionText" id="descriptionTiga">DESKRIPSI 3</p>
+        </div>
+       </div>
+       
+      </div>
+       <div class="underline"></div>
+       
+       <p id="bio" class="infoTxt"><ion-icon name="sparkles"></ion-icon>&nbsp;Favorite Thing</p>
+       <div class="container-favorite">
+       <div class="cards-favorite">
+        
+        <div class="favorite-items">
+         <div class="rowFav fav1" id="arrowFavorite"></div>
+         <div class="wrapperFav">
+           <ion-icon name="game-controller"></ion-icon>
+           <p class="favtxt" id="textWhite">Game</p>
+         </div>
+          <div class="descFav row1" id="cards-color">
+           <p id="desc1">FAVORITE 1</p>
+          </div>
+        </div>
+        
+        <div class="favorite-items">
+         <div class="rowFav fav2" id="arrowFavorite"></div>
+         <div class="wrapperFav">
+           <ion-icon name="musical-notes"></ion-icon>
+           <p class="favtxt" id="textWhite">Music</p>
+         </div>
+         <div class="descFav row2" id="cards-color">
+           <p id="desc2">FAVORITE 2</p>
+          </div>
+        </div>
+        
+        <div class="favorite-items">
+         <div class="rowFav fav3" id="arrowFavorite"></div>
+         <div class="wrapperFav">
+           <ion-icon name="code-slash"></ion-icon>
+           <p class="favtxt" id="textWhite">Coding</p>
+         </div>
+         <div class="descFav row2" id="cards-color">
+           <p id="desc3">FAVORITE 3</p>
+          </div>
+        </div>
+        
+        <div class="favorite-items">
+         <div class="rowFav fav4" id="arrowFavorite"></div>
+         <div class="wrapperFav">
+          <ion-icon name="bed"></ion-icon>
+           <p class="favtxt" id="textWhite">Sleep</p>
+         </div>
+         <div class="descFav row4" id="cards-color">
+           <p id="desc4">FAVORITE 4</p>
+          </div>
+        </div>
+        
+       </div>
+      </div>
+     <!--containerFavorite end-->
+    
+    <div class="underline"></div>
+    
+     <p id="bio" class="infoTxt"><ion-icon name="folder"></ion-icon>&nbsp;My Collection Website</p>
+    <div class="my-koleksi">
+      <div class="koleksi-box">
+       <div class="content-koleksi koleksi1" id="cards-color">
+        <ion-icon name="tv" class="ico-koleksi"></ion-icon>
+        <p class="title-koleksi" id="textWhite">Contoh Judul website</p>
+       <div class="container-deskripsi-koleksi">
+        
+       <div class="box-deskripsi-koleksi-1" id="myDescription">
+        <p class="deskripsi-koleksi" id="deskripsi-1">deskripsi pertama</p>
+        </div>
+        
+        <div class="box-deskripsi-koleksi-2" id="myDescription">
+         <div class="container-arrow-koleksi">
+          <div class="arrow-koleksi" id="myDescription"></div>
+         </div>
+         
+         <div class="cards-deskripsi-2" id="myKoleksi">
+          <p class="deskripsi-koleksi" id="deskripsi-2">deskripsi ke dua</p>
+         </div>
+        </div>
+        
+        </div>
+      </div>
+      </div>
+      <div class="cta-koleksi">
+       <ion-icon name="chevron-back" class="ico-next" id="jawaban" onclick="undoKoleksi()"></ion-icon>
+       <button class="btn-koleksi" id="myButton">Launch !</button>
+       <ion-icon name="chevron-forward" class="ico-next" id="jawaban" onclick="nextKoleksi()"></ion-icon>
+      </div>
+     </div>
+    
+    <div class="underline"></div>
+    
+    <div class="footer-container">
+    <p id="bio" class="infoTxt"><ion-icon name="book"></ion-icon>&nbsp;Explore Properties</p>
+     <div class="footer-box">
+      
+     <div class="wrapper-box-footer" id="cards-color">
+     <div class="wrapper-footer">
+      <div class="footer-box-text" id="myDescription">
+        <li class="footer-li">
+         <a class="footer-text" id="textWhite">About Me</a>
+        </li>
+       </div>
+       <div class="footer-box-text" id="myDescription" onclick="opsi()">
+        <li class="footer-li">
+         <a class="footer-text" id="textWhite">Privacy Policy</a>
+         </li>
+       </div>
+       <div class="footer-box-text" id="myDescription">
+        <li class="footer-li">
+         <a class="footer-text" id="textWhite">About this Website?</a>
+        </li>
+       </div>
+      </div>
+       
+      <div class="wrapper-footer-2">
+       <div class="footer-box-text" id="myDescription">
+        <li class="footer-li">
+         <a class="footer-text" id="textWhite">Terms Of Service</a>
+        </li>
+       </div>
+       <div class="footer-box-text" id="myDescription">
+        <li class="footer-li">
+         <a class="footer-text" id="textWhite">Contact Us</a>
+        </li>
+       </div>
+       <div class="footer-box-text" id="myDescription">
+        <li class="footer-li">
+         <a class="footer-text" id="textWhite">Help</a>
+        </li>
+       </div>
+       
+       </div>
+      </div>
+     </div>
+    </div>
+    
+    <div class="container-explore">
+      <header class="header-explore" id="profileSection">
+       <div class="header-explore-wrapper">
+        <p class="title-explore" id=textWhite>Explore Properties</p> 
+       </div>
+      </header>
+     <div class="body-explore" id="containerId">
+      <div class="explore-box" id="myDescription">
+       <div class="arrow-explore-left" id="myKoleksi"></div>
+       <p class="explore-text" id="myKoleksi">Explore Text</p>
+      </div>
+      <div class="explore-box" id="myDescription">
+       <div class="arrow-explore-right" id="myKoleksi"></div>
+       <p class="explore-text" id="myKoleksi">Explore Text</p>
+      </div>
+      <div class="explore-box" id="myDescription">
+       <div class="arrow-explore-left" id="myKoleksi"></div>
+       <p class="explore-text" id="myKoleksi">Explore Text</p>
+      </div>
+      <div class="explore-box" id="myDescription">
+       <div class="arrow-explore-right" id="myKoleksi"></div>
+       <p class="explore-text" id="myKoleksi">Explore Text</p>
+      </div>
+      <div class="explore-box" id="myDescription">
+       <p class="explore-text" id="myKoleksi">Explore Text</p>
+      </div>
+      
+      <div class="privacy-policy">
+       <p class="text-privacy-policy" id="myKoleksi">Text Privacy Policy</p>
+      </div>
+      
+      <div class="container-terms-of-service">
+       <div class="terms-box">
+        <p class="terms-text" id="myKoleksi">Text Terms Of Service</p>
+       </div>
+      </div>
+      
+      <div class="container-help">
+       <div class="box-help">
+        <p class="text-help" id="myKoleksi">Text Help</p>
+       </div>
+      </div>
+      
+      <div class="container-contact-us">
+       <div class="box-contact-us">
+        <p class="text-contact-us" id="myKoleksi">text contact us</p>
+       </div>
+      </div>
+      
+     </div> <!-- ini end div body-explore -->
+    </div>
+    
+    <footer id="footers">
+     <p class="footer-class" id="textWhite">&copy;Copyright 2023 All Rights Reserved.</p>
+    </footer>
+    
+  </div>
+ </div>
+  <div class="container" id="containerId">
+    <div class="container-linear"></div>
+    <div class="container-love"></div>
+   <div class="wrapper" id="blue-bg">
+    <div class="containerInput">
+      <input class="input-jawaban" id="jawaban" type="text" placeholder="Ketikan Pesan" onkeyup="checkInput()"/>
+      <div class="barier"></div>
+      <button class="btn-bot" onclick="botStart()" id="myButton" disabled><ion-icon name="send-sharp"></ion-icon></button>
+     </div>
+     <div class="footer">
+       <p>This website is made only for learning in development a website, FaBot-Chat <u>2 August Version.</u></p>
+     </div>
+   </div>
+   
+   <div class="container-sidebar" id="blueHeaderUser">
+    <div class="header-sidebar" id="blueHeaderUser">
+     <div class="box-header-user" id="textWhite">
+      <div class="img-box-user" id="textWhite">
+       <img src="profileicon.webp" class="img-user">
+      </div>
+      <div class="feature-sidebar">
+       <div class="menu-sidebar" onclick="openSidebar()"></div>
+       <p class="sidebar-title" id="textWhite">USER FABOT</p>
+       <ion-icon name="moon" class="main-icon" id="moon" onclick="switchTheme()"></ion-icon>
+      </div>
+      <div class="box-info-user">
+       <div class="info-user">
+        <span class="text-usr say-user" id="textWhite">Hello</span>
+        <span class="text-usr name-user" id="textWhite">Unknown User</span>
+        <p class="user-email">unknown@gmail.com</p>
+       </div>
+      </div>
+     </div>
+      <div class="container-hobby-user">
+       <p class="text-hobby-user" id="textWhite">&nbsp;Hobby&nbsp;&nbsp;:</p>
+       <div class="wrapper-hobby-user">
+        <div class="box-hobby-user" id="box-hobby-clr">
+         <p class="text-hobby-user" id="textWhite">Coding</p>
+        </div>
+        <div class="box-hobby-user" id="box-hobby-clr">
+         <p class="text-hobby-user" id="textWhite">Game</p>
+        </div>
+        <div class="box-hobby-user" id="box-hobby-clr">
+         <p class="text-hobby-user" id="textWhite">Sleep</p>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="content-sidebar" id="myKoleksi">
+     <div class="box-sidebar-items" onclick="opsi()">
+      <ion-icon name="home" class="sidebar-icon" id="textWhite"></ion-icon>
+      <p class="text-sidebar" id="textWhite">Home</p>
+     </div>
+     <div class="box-sidebar-items" onclick="opsi()">
+      <ion-icon name="person" class="sidebar-icon" id="textWhite"></ion-icon>
+      <p class="text-sidebar" id="textWhite">My Profile</p>
+     </div>
+     <div class="box-sidebar-items" onclick="opsi()">
+      <ion-icon name="chatbubble-ellipses" class="sidebar-icon" id="textWhite"></ion-icon>
+      <p class="text-sidebar" id="textWhite">Message History</p>
+     </div>
+     <div class="box-sidebar-items" onclick="DeveloperMenu()">
+      <ion-icon name="id-card" class="sidebar-icon" id="textWhite"></ion-icon>
+      <p class="text-sidebar" id="textWhite">About Developer</p>
+     </div>
+     <div class="box-social-media">
+      <p class="text-usr" id="textWhite">Social Media</p>
+      <div class="box-item-sosmed">
+       <a class="item-icon-sosmed" href="https://www.facebook.com/bayu.an.754"><i class="fab fa-facebook" id="textWhite"></i></a>
+       <a class="item-icon-sosmed" href="https://www.facebook.com/fridfn_"><i class="fab fa-instagram" id="textWhite"></i></a>
+       <a class="item-icon-sosmed" href="https://t.me/ShirakamiFubuki7"><i class="fab fa-telegram" id="textWhite"></i></a>
+       <a class="item-icon-sosmed" href="https://tiktok.com/@frdfnz"><i class="fab fa-tiktok"
+       id="textWhite"></i></a>
+      </div>
+     </div>
+    </div>
+    <div class="signin-box" id="blueHeaderUser">
+     <ion-icon name="log-in" class="sidebar-icon" id="textWhite"></ion-icon>
+     <p class="signin-text" onclick="opsi()" id="textWhite">Login</p>
+    </div>
+   </div>
+   
+   <div class="containerMail" id="containerId">
+     <div class="boxEmail" id="cards-color">
+      <div class="emailInfo" id="arrowFavorite">
+       <p class="infoTitle" id="textWhite">Judul email :</p>
+       <p class="judulEmail" id="myDescription" contenteditable="true"></p>
+      </div>
+      <p class="infoTitle" id="textWhite">Tuliskan pesan</p>
+       <div class="wrapperEmail" >
+        <p class="inputEmail" id="myDescription" contenteditable="true"></p>
+        <div class="spanEmail">
+         <p class="footerEmail" id="textWhite"></p>
+         <button class="btn-email" id="myButton" onclick="sendEmail()">Send</button>
+         </div>
+       </div>
+     </div>
+    </div>
+    
+    <div class="containerOpsi">
+     <div class="wrapperOpsi" id="myButton">
+      <div class="boxOpsi">
+      <p class="txtOpsi" onclick="opsi()"><ion-icon name="settings-sharp" id="ico"></ion-icon>&nbsp;Pengaturan</p>
+      </div>
+      <div class="boxOpsi">
+       <p class="txtOpsi" onclick="opsi()"><ion-icon name="share-social" id="ico"></ion-icon>&nbsp;Bagikan</p>
+      </div>
+      <div class="boxOpsi">
+       <p class="txtOpsi" onclick="opsi()"><ion-icon name="help-circle" id="ico"></ion-icon>&nbsp;Info bot</p>
+      </div>
+      <div class="boxOpsi">
+       <p class="txtOpsi" onclick="opsi()"><ion-icon name="trash" id="ico"></ion-icon>&nbsp;Bersihkan chat</p>
+      </div>
+     </div>
+    </div>
+     
+    
+   <div class="date">
+     <p>31 Mei 2023</p>
+   </div>
+   <div class="about">
+     <p><ion-icon name="lock-closed"></ion-icon> pesan dan riwayat chat terenkripsi secara end-to-end. tidak seorang pun di luar chat ini, termasuk developer yang dapat membaca atau melihatnya.</p>
+   </div>
+   <div class="containerChat" id="firstContentPertanyaan">
+    <div class="chatPertanyaans styleQuest" id="firstChatPertanyaan">
+      <div class="arrowQuest"></div>
+       <p id="firstPertanyaan">pertanyaan</p>
+       <p id="timeQuestion"></p>
+      </div>
+    </div>
+   <div class="containerChat" id="contentJawaban">
+      <div class="chatJawaban styleAsk" id="chatJawaban">
+       <div class="arrowAsk"></div>
+         <p id="textJawaban">Jawaban</p>
+         <span>
+          <p id="timeAsk"></p>
+          <ion-icon name="checkmark-done-sharp" id="check2" class="ceklisDua"></ion-icon>
+         </span>
+       </div>
+    </div>
+   <div class="containerChat" id="contentPertanyaan">
+     <div id="chatPertanyaan" class="chatPertanyaans styleQuest">
+      <div class="arrowQuest"></div>
+       <p id="textPertanyaan">pertanyaan kedua</p>
+       <p id="timeQuestion"></p>
+      </div>
+    </div>
+  </div>
+  <script src="style.js"></script>
+  <script src="swapBg.js"></script>
+  <script src="chatbot.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+   (function(){
+      emailjs.init("yZzbJwytB-aSDSuZw");
+   })();
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ </body>
+</html>
